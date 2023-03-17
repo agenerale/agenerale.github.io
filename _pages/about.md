@@ -18,6 +18,9 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: false  # includes social icons at the bottom of the page
 ---
 
+I'm currently a doctoral candidate under advisement of [Dr. Surya R. Kalidindi](https://www.me.gatech.edu/faculty/kalidindi) at the Georgia Institute of Technology focused primarily on fundamental and applied problems within computational material science. My work is centered around materials exploration and identifying novel structures to meet certain functional property targets through leveraging computational methods and machine learning in order to solve this high-dimensional inverse problem.
+
+<!---
 Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
 Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
