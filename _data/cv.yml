@@ -61,8 +61,9 @@
   type: nested_list
   contents:
     - title: Computational Material Science
-    - title: Inverse Problems
-    - title: Stochastic Functions and Modeling
+    - title: Stochastic Inverse Problems
+    - title: Machine Learning
+    - title: Statistical Modeling
 
 
 - title: Other Interests
