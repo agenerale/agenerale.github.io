@@ -1,80 +1,53 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image
-img: assets/img/3.jpg
+title: Data Fusion
+description: Inference of visco-elastoplastic multimodal damage model parameters with heterogeneous experimental data.
+img: assets/img/afrl_data_fusion/figure4.png
 importance: 2
 category: work
+scholar:
+  bibliography_template: {{reference}}
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+Most materials experimental datasets tend to be very sparse and a fragmented collection of disparate measurements taken over a number of years, just owing to the prohibitive cost of performing a number of lengthy tests on large samples. Of course, this is something high-throughout experimental techniques are attempting to address {% cite rossi_study_2019 --file cited_posts %}, but we'll leave that discussion to another time.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
-
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+This work dealt with a pretty standard experimental dataset consisting of 7 tests performed with simultaneous tension-torsion loading of an Oxide/Oxide ceramic matrix composite (CMC) (Images below of microstructure and sample post-test). Further details regarding testing, and images displaying the test set up and microstructure considered can be found in the thesis of DeRienzo {% cite derienzo_bi-axial_2013 --file cited_posts %}.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/afrl_data_fusion/nextelmicro.png" title="micro-CT image of Oxide/Oxide microstructure" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/afrl_data_fusion/derienzotesting.png" title="Tubular specimens with strain gauge placement." class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
+
+Importantly, all of the test were performed with distinct loading rates, such that there were no replicates of any singular test. The complete test parameters can be seen below, showing the axial and torsional loading rates:
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/afrl_data_fusion/table1.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    This image can also have a caption. It's like magic.
+    An overview of the workflow to generate stochastic virtual statistical volume elements (SVEs) (the concept of an SVE is described in further depth in {% cite tallman_14_2020 --file cited_posts %}) for the 5-harness satin composite studied.
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal its glory in the next row of images.
+The question being asked, was then, how can we then best identify the set of constitutive model parameters $$\boldsymbol{\theta}$$ that would best explain the 7 experimental observations?
+
+This sort of questions is the prototypical question broadly classified as an **inverse problem**. As you might imagine, this type of problem shows up *all* the time in a broad array of scientific fields - really when we're looking to model just about anything.
+
+In it's simplest form, this type of problem looks like:
+
+$$ y = \mathcal{H}(\boldsymbol{\theta}) $$
+
+where $$y$$ is the observed output, $$\mathcal{H}$$ the forward model (our damage model), and $$\boldsymbol{\theta}$$ the free parameters of our forward model we're seeking to identify. Posed even in this deceptively simple form, this problem is ill-posed, such that multiple combinations of $$\boldsymbol{\theta}$$ may lead to *equivalent* observed outputs $$y$$. 
 
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
 
+**this project page is still under construction - complete details of this work can be found in {% cite generale_bayesian_2022 --file cited_posts %}**
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+References
+----------
 
-{% raw %}
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-```
-{% endraw %}
+{% bibliography --file cited_posts --cited_in_order %}
