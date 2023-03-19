@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Thermal Conductivity
-description: Using active-learning in order to develop structure-property reduced-order models
+description: Using active learning to develop structure-property reduced-order model linkages
 img: assets/img/conductivity/figure1.jpg
 importance: 1
 category: work
