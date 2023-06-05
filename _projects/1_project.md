@@ -26,7 +26,7 @@ We could either:
 
 This work opts to develop this mapping from structure to property, $$G_\theta: \mathcal{S} \rightarrow \mathcal{P}$$ along the lines of the last option, parameterized by $$\theta$$. 
 
-Before I get to discussing the microstructure descriptors selected, of course, as in any ML problem, the first step requires data curation/generation. This was done using the open-source textile generator TexGen along with certain downstream post-processing steps to impart semi-realistic residual porosity. The generating process looked a little like:
+Before I get to discussing the microstructure descriptors selected, of course, as in any ML problem, the first step requires data curation/generation. This was done using the open-source textile generator TexGen {% cite lin_modelling_2011 --file cited_posts %} along with certain downstream post-processing steps to impart semi-realistic residual porosity. The generating process looked a little like:
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -57,7 +57,7 @@ The mapping $$G_\theta$$ was defined to be 3 independent $$\mathcal{GP}$$s, each
 In practice, this looks like:
 1. Train the $$\mathcal{GP}$$s on a small intialization dataset (~5 microstructures).
 2. Make predictions with the trained $$\mathcal{GP}$$s on the remaining potential microstructures.
-3. Identify the microstructure $$\boldsymbol{\alpha}^*$$ with the largest posterior ($$p(\boldsymbol{k} \vert \boldsymbol{\alpha}_{1:3})$$) uncertainty, $$\boldsymbol{\alpha}^{*} = \textrm{argmax var}(\boldsymbol{k} \vert \boldsymbol{\alpha}_{1:3})$$, and run a FE-simulation for that microstructure.
+3. Identify the microstructure $$\boldsymbol{\alpha}^*$$ with the largest posterior ($$p(\boldsymbol{k} \vert \boldsymbol{\alpha})$$) uncertainty, $$\boldsymbol{\alpha}^{*} = \textrm{argmax var}(\boldsymbol{k} \vert \boldsymbol{\alpha})$$, and run a FE-simulation for that microstructure.
 
 Running through this iterative process can save lots of unnecessarily computing hours running microstructures which aren't going to aid in training the underlying models! Just to demonstrate, here are some plots showing rapid convergence of error metrics and $$\theta$$ in the first ~200 total microstructures - a massive reduction over the complete available dataset.
 

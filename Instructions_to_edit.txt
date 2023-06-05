@@ -1,0 +1,5 @@
+1. Run Command Prompt with Ruby
+2. Commend out "mini_racer" in Gemfile for local edits (revert when committing)
+2. bundle install
+3. bundle exec jekyll serve
+4. Copy serve address into browser to view
