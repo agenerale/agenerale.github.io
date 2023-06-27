@@ -35,7 +35,7 @@ Importantly, all of the test were performed with distinct loading rates, such th
 
 The question being asked, was then, how can we then best identify the set of constitutive model parameters $$\boldsymbol{\theta}$$ that would best explain the 7 experimental observations?
 
-This sort of questions is the prototypical question broadly classified as an **inverse problem**. As you might imagine, this type of problem shows up *all* the time in a broad array of scientific fields - anytime we have some governing mathematical model for which we're seeking to identify the parameterization best explaining experimental measurements.
+This sort of questions is the prototypical question broadly classified as an *inverse problem*. As you might imagine, this type of problem shows up *all* the time in a broad array of scientific fields - anytime we have some governing mathematical model for which we're seeking to identify the parameterization best explaining experimental measurements.
 
 In it's simplest form, this type of problem looks like:
 
@@ -61,7 +61,7 @@ and finally, inference can be performed according to
 
 $$ p(\boldsymbol{\sigma},\sigma_{\beta}^2,\sigma_{\xi}^2 \vert \boldsymbol{s}^E) \propto p(\boldsymbol{s}^E \vert \boldsymbol{\sigma},\sigma_{\beta}^2,\sigma_{\xi}^2) p(\boldsymbol{\theta}) p(\sigma_{\beta}^2,\sigma_{\xi}^2) $$
 
-The posterior was then approximated by Markov Chain Monte Carlo (MCMC) where the high-dimensional distribution can be visualized through a scatter plot matrix, where the *Maximum a Posteri* (MAP) value is highlighted in blue.
+The posterior was then approximated by a parallel chain Markov Chain Monte Carlo (MCMC) algorithm with an *affine invariant* sampler {% cite foreman-mackey_emcee_2013 --file cited_posts %}. The resulting estimated high-dimensional posterior distribution can be visualized through a scatter plot matrix, where the *Maximum a Posteri* (MAP) value is highlighted in blue.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
