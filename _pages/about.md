@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <strong>Computational Materials Scientist · Mechanical Engineer</strong>
+subtitle: <strong>Computational Materials Scientist · Data Scientist</strong>
 
 profile:
   align: right

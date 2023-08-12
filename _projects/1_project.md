@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Thermal Conductivity
-description: Using active learning to develop structure-property reduced-order model linkages
+description: Using active learning to develop structure-property surrogate model linkages
 img: assets/img/conductivity/figure1.jpg
 importance: 1
 category: work
@@ -9,7 +9,7 @@ scholar:
   bibliography_template: {{reference}}
 ---
 
-One of the first projects of my Ph.D. entailed developing several Gaussian process ($$\mathcal{GP}$$) reduced-order models in order to predict the effective thermal conductivity of stochastic virtually generated chemical vapor infiltration (CVI) densified SiC/SiC ceramic matrix composite (CMC) microstructures. This post should hopefully serve as an easy to digest version of the paper *"reduced-order models for microstructure-sensitive effective thermal conductivity of woven ceramic matrix composites with residual porosity*" {% cite generale_reduced-order_2021 --file cited_posts %}, but of course the article provides a more thorough treatment of the work.
+One of the first projects of my Ph.D. entailed developing several Gaussian process ($$\mathcal{GP}$$) surrogate models in order to predict the effective thermal conductivity of stochastic virtually generated chemical vapor infiltration (CVI) densified SiC/SiC ceramic matrix composite (CMC) microstructures. This post should hopefully serve as an easy to digest version of the paper *"surrogate models for microstructure-sensitive effective thermal conductivity of woven ceramic matrix composites with residual porosity*" {% cite generale_surrogate_2021 --file cited_posts %}, but of course the article provides a more thorough treatment of the work.
 
 CMCs and especially CVI-densified SiC/SiC CMCs are incredibly fascinating as it's one of the few available structural material systems which can operate in high-temperature oxidizing environments for prolonged periods. As with all material systems, there are of course a few trade offs:
 1. Exceedingly long densification times required in the reactor.
@@ -17,7 +17,7 @@ CMCs and especially CVI-densified SiC/SiC CMCs are incredibly fascinating as it'
 
 The end result is that it's particularly challenging to have good through-thickness (or out-of-plane) thermal conductivity with such a high percentage of residual porosity. This porosity is also inherently coupled to the weave architecture, or the resulting spatial arrangement of constituents in the microstructure. Of course for many high heat-flux applications, we'd be looking to maximize thermal conductivity out-of-plane ($$k_{33}$$) so that we can adequately cool the surface temperature. The natural next question to ask might be:
 
-How can we quickly search through various spatial arrangements of constituents to acomplish this goal (i.e. maximize $$k_{33}$$)?
+How can we quickly search through various spatial arrangements of constituents to accomplish this goal (i.e. maximize $$k_{33}$$)?
 
 We could either:
 - Numerically solve governing PDE (ex. Finite-Element Method) for each and every possible microstructure (I should mention, more refined methods exist to search this space, such as Topology Optimization (TO), although TO presents its own issues in terms of cell-discretization of the input domain, initialization, convergence, and is still computationally demanding) {% cite zhu_two-scale_2017 --file cited_posts %}.
@@ -54,19 +54,19 @@ Each the collection of SVEs can then be transformed to a point cloud in PC-space
 
 The mapping $$G_\theta$$ was defined to be 3 independent $$\mathcal{GP}$$s, each predicting
  one component of the orthotropic thermal conductivity of the SVE, with $$\theta$$ representing
- the set of hyperparameters of the ARD-SE kernel {% cite bishop_pattern_2006 --file cited_posts %}.
+ the set of hyperparameters of the automatic relevance determination squared exponential (ARD-SE) kernel {% cite bishop_pattern_2006 --file cited_posts %}.
  The computational cost involved in model building was minimized through sequentially identifying an
  optimal experimental design in the input space through active learning. This strategy minimizes the
  number of expensive black-box function evaluations, or the number of FE-simulations required, through
  intelligently selecting locations in the input space for which the model is the most uncertain.
  
 In practice, this maximum posterior uncertainty strategy looks like:
-1. Train the $$\mathcal{GP}$$s on a small intialization dataset (~10$$d$$ where $$d$$ is the input feature dimension).
+1. Train the $$\mathcal{GP}$$s on a small initialization dataset (~10$$d$$ where $$d$$ is the input feature dimension).
 2. Perform predictions with the current model, $$\mathcal{GP}$$s, on the remaining potential microstructures.
 3. Identify the microstructure $$\boldsymbol{\alpha}^*$$ with the largest posterior uncertainty, and evaluate the black-box FE-simulation for that microstructure.
 
 Running through this iterative process can save redundant FE function evaluations and computing hours
- running microstructures which aren't informative of the underlying structure-property linkage.
+ running microstructures which are not informative of the underlying structure-property linkage.
  As a demonstration, below are plots showing rapid convergence of error metrics and $$\theta$$
  in the first ~200 total microstructures - a significant reduction over the complete available dataset.
 
