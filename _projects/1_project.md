@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Thermal Conductivity
+title: Active Learning
 description: Using active learning to develop structure-property surrogate model linkages
 img: assets/img/conductivity/figure1.jpg
-importance: 3
+importance: 4
 category: work
 scholar:
   bibliography_template: {{reference}}
