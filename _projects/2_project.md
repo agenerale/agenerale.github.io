@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Bayesian Inversion
+title: Bayesian Data Fusion
 description: Bayesian inference of a visco-elastoplastic multimodal damage model parameters with fusion of heterogeneous experimental data.
 img: assets/img/afrl_data_fusion/figure4.png
 importance: 3
