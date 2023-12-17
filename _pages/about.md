@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <strong>Computational Materials Scientist · Data Scientist</strong>
+subtitle: <strong>Computational Materials Research Scientist · Machine Learning Engineer</strong>
 
 profile:
   align: right
@@ -18,6 +18,6 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-**Research:** I am currently a doctoral candidate under advisement of [Dr. Surya R. Kalidindi](https://www.me.gatech.edu/faculty/kalidindi) in the [Mechanical Engineering Department]( https://www.me.gatech.edu/) at the Georgia Institute of Technology. My research primarily focuses upon materials design and exploration, conceptualized through hierarchical conditional transport maps. This approach highlights the intersection between computational materials science, statistical embeddings, and dynamic optimal transport - with the coupled goals of identifying novel material compositions and learning the conditional process dynamics to enable their synthesis.
+**Research:** I am currently a doctoral candidate under advisement of [Dr. Surya R. Kalidindi](https://www.me.gatech.edu/faculty/kalidindi) in the [MINED Research Group](https://mined.gatech.edu/) at the Georgia Institute of Technology. My research primarily focuses upon materials design and exploration, conceptualized through hierarchical conditional transport maps. This approach highlights the intersection between computational materials science, statistical embeddings, and dynamic optimal transport - with the coupled goals of identifying novel material compositions and learning the conditional process dynamics to enable their synthesis.
 
 **Previously:** Prior to returning to graduate school, I worked for several years in the aerospace industry, first in the fabrication of high-pressure turbine airfoils, and later in designing the internal cooling circuits of such airfoils for commercial and military applications.
