@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <strong>Computational Materials Research Scientist</strong>
+subtitle: <strong>Materials Informatics • Machine Learning </strong>
 
 profile:
   align: right
