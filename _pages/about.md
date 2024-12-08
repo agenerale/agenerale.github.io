@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <strong>Materials Informatics • Machine Learning </strong>
+subtitle: <strong>Materials Informatics • Scientific Machine Learning </strong>
 
 profile:
   align: right
