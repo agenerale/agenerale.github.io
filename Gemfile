@@ -1,6 +1,11 @@
 source 'https://rubygems.org'
+before_deploy:
+  - yes | gem update --system --force
+  - gem install bundler
+  - gem install uri
+  - gem install logger
 group :jekyll_plugins do
-	gem 'wdm', '>= 0.1.0'
+#	gem 'wdm', '>= 0.1.0'
     gem 'classifier-reborn'
     gem 'jekyll'
     gem 'jekyll-archives'
