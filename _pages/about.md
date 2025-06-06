@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <strong>Materials Informatics • Scientific Machine Learning </strong>
+subtitle: <strong>Scientific Machine Learning • Materials Informatics</strong>
 
 profile:
   align: right
@@ -18,6 +18,8 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-**Research:** I am currently a doctoral candidate under advisement of [Dr. Surya R. Kalidindi](https://www.me.gatech.edu/faculty/kalidindi) in the [MINED Research Group](https://mined.gatech.edu/) at the Georgia Institute of Technology. My research primarily focuses upon materials design and exploration, conceptualized through hierarchical conditional transport maps. This approach highlights the intersection between computational materials science, statistical embeddings, and dynamic optimal transport - with the coupled goals of identifying novel material compositions and learning the conditional process dynamics to enable their synthesis.
+I recently completed my doctoral studies under advisement of [Dr. Surya R. Kalidindi](https://www.me.gatech.edu/faculty/kalidindi) in the [MINED Research Group](https://mined.gatech.edu/)  at Georgia Tech focused on the intersection of scientific machine learning and materials informatics. My research developed data-driven methods for material and microstructure design, employing hierarchical conditional transport maps to embed complex microstructural information into tractable statistical representations. These frameworks connect computational materials science, statistical embedding techniques, and optimal transport theory, enabling the discovery of novel compositions and processing pathways through the modeling of process–structure–property relationships. 
 
-**Previously:** Prior to returning to graduate school, I worked for several years in the aerospace industry, first in the fabrication of high-pressure turbine airfoils, and later in designing the internal cooling circuits of such airfoils for commercial and military applications.
+Enabling these frameworks involves several novel algorithmic advances in flow-based generative models, permitting the probabilistic simulation of conditional processes as well as the Bayesian treatment of high-dimensional inverse problems – both of which permits the joint design of material microstructures along with their manufacturing pathways to achieve target property sets.
+
+Today, I apply these same scientific-ML techniques in my professional role in aerospace, collaborating with interdisciplinary teams to turn advanced modeling ideas into practical tools for materials and manufacturing challenges.
