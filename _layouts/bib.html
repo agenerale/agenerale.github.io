@@ -118,6 +118,9 @@
         {%- else -%}
           {%- capture entrytype -%}{%- endcapture -%}
         {%- endif -%}
+        {%- comment -%} Reset per entry so a missing month/year doesn't inherit the previous entry's value {%- endcomment -%}
+        {%- assign entrymonth = "" -%}
+        {%- assign entryyear = "" -%}
         {%- if entry.month -%}
           {%- capture entrymonth -%}{{ " " }}{{ entry.month | capitalize }}{%- endcapture -%}
         {%- endif -%}
