@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <strong>Scientific Machine Learning • Materials Informatics</strong>
+subtitle: <strong><span class="text-nowrap">Scientific Machine Learning •</span> <span class="text-nowrap">Generative Modeling •</span> <span class="text-nowrap">Materials Informatics</span></strong>
 
 profile:
   align: right

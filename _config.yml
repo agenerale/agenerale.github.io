@@ -8,12 +8,12 @@ middle_name: P.
 last_name: Generale
 email: adam.generale@gmail.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Adam P. Generale personal website.
+  Adam P. Generale leads a machine learning group at Pratt & Whitney, working on scientific machine learning, generative modeling, and materials informatics.
 footer_text: #>
   #Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   #Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
   #Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
-keywords: jekyll, jekyll-theme, academic-website, portfolio-website  # add your own keywords or leave empty
+keywords: scientific machine learning, generative modeling, materials informatics, uncertainty quantification, Bayesian inference, inverse problems, optimal transport  # add your own keywords or leave empty
 
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: /android-chrome-512x512.png  # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
@@ -59,9 +59,9 @@ max_width: 800px
 # Open Graph & Schema.org
 # -----------------------------------------------------------------------------
 # Display links to the page with a preview object on social media.
-serve_og_meta: false # Include Open Graph meta tags in the HTML head
+serve_og_meta: true # Include Open Graph meta tags in the HTML head
 serve_schema_org: false # Include Schema.org in the HTML head
-og_image: # The site-wide (default for all links) Open Graph preview image
+og_image: https://agenerale.github.io/assets/img/Picture1.jpg # The site-wide (default for all links) Open Graph preview image
 
 # -----------------------------------------------------------------------------
 # Social integration
